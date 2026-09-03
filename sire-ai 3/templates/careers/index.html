@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Careers | Sire Ltd{% endblock %}
+
+{% block content %}
+
+<header class="section" style="padding-bottom:1.5rem;">
+  <div class="container" style="max-width:900px;">
+    <div class="eyebrow">Careers</div>
+    <h1 style="font-size:var(--step-3);">Build the thing<br>everything else inherits from.</h1>
+    <p style="font-size:1.05rem; max-width:60ch;">We're a small team across three offices, running one shared engine underneath four products instead of four separate stacks built from scratch. If you'd rather go deep than wide, this is that kind of place.</p>
+    <div class="culture-strip reveal" style="margin-top:2rem;">
+      <span class="tag">In-person, 3 days/week</span>
+      <span class="tag">Small teams, long ownership</span>
+      <span class="tag">Equity from day one</span>
+      <span class="tag">No on-call for research roles</span>
+    </div>
+  </div>
+</header>
+
+<section class="section section-alt section-border">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">How we work</div>
+        <h2>Fewer things,<br>held longer.</h2>
+      </div>
+      <p>Most people here own a problem for years, not a sprint. We'd rather hire someone who wants to live inside one hard question than someone chasing the next shiny one.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <span class="index">01</span>
+        <h3>Small teams</h3>
+        <p>Most product teams are 4–6 people. You'll know exactly what you shipped and why.</p>
+      </div>
+      <div class="card reveal">
+        <span class="index">02</span>
+        <h3>Research and product, together</h3>
+        <p>No wall between the people training the model and the people shipping it. Everyone sits near the eval dashboards.</p>
+      </div>
+      <div class="card reveal">
+        <span class="index">03</span>
+        <h3>Written culture</h3>
+        <p>Design docs over meetings. If it's a decision worth making, it's worth writing down.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Open roles</div>
+        <h2>Currently hiring.</h2>
+      </div>
+    </div>
+
+    <div class="role-list reveal">
+      {% for role in roles %}
+      <a href="{{ url_for('contact.index') }}" class="role-row">
+        <div>
+          <div class="role-title">{{ role.title }}</div>
+          <div class="role-meta">{{ role.team }}</div>
+        </div>
+        <div class="role-meta">{{ role.location }}</div>
+        <div class="role-meta">{{ role.type }}</div>
+        <div class="role-arrow">→</div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band section-alt">
+  <div class="container">
+    <h2 class="reveal">Don't see the right role?</h2>
+    <p class="reveal">We're small enough that a great fit matters more than an open req. Reach out anyway.</p>
+    <div class="btn-row reveal">
+      <a href="{{ url_for('contact.index') }}" class="btn btn-primary">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

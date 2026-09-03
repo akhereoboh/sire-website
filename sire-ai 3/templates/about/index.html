@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block title %}About | Sire Ltd{% endblock %}
+
+{% block content %}
+
+<header class="section" style="padding-bottom: 2rem;">
+  <div class="container" style="max-width: 900px;">
+    <div class="eyebrow">About Sire Ltd</div>
+    <h1 style="font-size: var(--step-3);">We named the company<br>after what we build.</h1>
+    <p style="font-size:1.1rem; max-width:60ch;">To sire is to originate: to be the source a lineage traces back to. That's the whole premise: build the engine everything else runs on, and take responsibility for what runs on it.</p>
+  </div>
+</header>
+
+<section class="section section-border section-alt">
+  <div class="container" style="max-width:900px;">
+    <div class="grid-2 reveal">
+      <div>
+        <h3 style="font-size:1.1rem;">The problem</h3>
+        <p>Most prediction and trading tools are single-purpose: rebuilt from scratch for every new market, with no shared track record to point back to.</p>
+      </div>
+      <div>
+        <h3 style="font-size:1.1rem;">Our approach</h3>
+        <p>Own one ML engine outright, version it like infrastructure, and let every product (ours and our customers') trace its calls back to the same auditable core.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-border">
+  <div class="container" style="max-width:820px;">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Lineage</div>
+        <h2>How we got here.</h2>
+      </div>
+    </div>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <span class="timeline-year">2019</span>
+        <h3>Founded in Cambridge</h3>
+        <p>Three engineers leave data roles to build a shared ML engine for prediction and trading, instead of a one-off model for every new idea.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2021</span>
+        <h3>Sire Core, first version</h3>
+        <p>Gradient-boosted models plus a signal-confluence gate, built to be reused across markets instead of retrained from scratch each time.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2024</span>
+        <h3>Sire AI Polymarket ships</h3>
+        <p>The core engine gets pointed at its first market: real-world prediction events, priced and settled on-chain.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2025</span>
+        <h3>Rise, Bounty, and WhatsApp Pay</h3>
+        <p>Three more products launch on the same engine: dual-exchange stock brokerage, an open task marketplace, and chat-native payments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt section-border">
+  <div class="container" style="max-width:820px;">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">What we hold to</div>
+        <h2>Values, in order.</h2>
+      </div>
+      <p>Ranked, not just listed: when two of these pull in different directions, this is the order that wins.</p>
+    </div>
+    <div class="reveal">
+      <div class="value-row">
+        <span class="value-num">01</span>
+        <div><h3>Auditable over impressive</h3><p>A signal we can explain beats one that merely backtests well. Every product ships with its accuracy history attached.</p></div>
+      </div>
+      <div class="value-row">
+        <span class="value-num">02</span>
+        <div><h3>Own the core</h3><p>We don't bolt an API call onto someone else's model and call it a product. If it's core to what we ship, we built and trained it ourselves.</p></div>
+      </div>
+      <div class="value-row">
+        <span class="value-num">03</span>
+        <div><h3>Slow releases, long support</h3><p>We'd rather ship fewer products and support each one for years than churn through versions.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Leadership</div>
+        <h2>Who's accountable<br>for the lineage.</h2>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="card team-card reveal">
+        <div class="team-photo" data-initials="OC"></div>
+        <div class="team-name">Onubogu Chidubem</div>
+        <div class="team-role">Co‑Founder</div>
+      </div>
+      <div class="card team-card reveal">
+        <div class="team-photo" data-initials="VO"></div>
+        <div class="team-name">Victory Akhere Oboh</div>
+        <div class="team-role">Co‑Founder &amp; CEO</div>
+      </div>
+      <div class="card team-card reveal">
+        <div class="team-photo" data-initials="JO"></div>
+        <div class="team-name">Judah Oboh</div>
+        <div class="team-role">Co‑Founder, Sales</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

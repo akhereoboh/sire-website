@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block title %}Sire Ltd | One engine, four products{% endblock %}
+
+{% block content %}
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">AI-powered decision tools</div>
+      <h1>Every product<br>has an <em>origin.</em></h1>
+      <p class="hero-sub">Sire Ltd builds one ML core and points it at hard prediction and money problems: real-world events, stock brokerage, outsourced tasks, and payments. Four products, one engine underneath.</p>
+      <div class="btn-row">
+        <a href="{{ url_for('products.index') }}" class="btn btn-primary">Explore the products</a>
+        <a href="{{ url_for('about.index') }}" class="btn btn-ghost">Our story</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>4</b><span>Live products</span></div>
+        <div class="hero-stat"><b>2</b><span>Exchanges covered</span></div>
+        <div class="hero-stat"><b>99.98%</b><span>Platform uptime</span></div>
+      </div>
+    </div>
+
+    <div class="lineage reveal">
+      <div class="lineage-label"><span>Product lineage</span><span class="dot">Sire Core</span></div>
+      <svg viewBox="0 0 380 380" role="img" aria-label="Diagram showing the Sire Core branching into four products: Sire AI Polymarket, Rise, Bounty, and the WhatsApp Payment Bot.">
+        <path class="lineage-path" d="M55,190 C165,190 165,55 296,55" pathLength="1" />
+        <path class="lineage-path" d="M55,190 C165,190 165,150 296,150" pathLength="1" />
+        <path class="lineage-path" d="M55,190 C165,190 165,235 296,235" pathLength="1" />
+        <path class="lineage-path" d="M55,190 C165,190 165,325 296,325" pathLength="1" />
+
+        <g class="lineage-node">
+          <circle cx="55" cy="190" r="6.5"/>
+          <text x="4" y="0" class="lineage-node-title" fill="#D9A85C" transform="translate(10,182)">Sire Core</text>
+          <text class="lineage-node-label" transform="translate(10,198)">shared ML engine</text>
+        </g>
+
+        <g class="lineage-node dim">
+          <circle cx="296" cy="55" r="4.5"/>
+          <text class="lineage-node-title" transform="translate(240,45)">Sire AI Polymarket</text>
+          <text class="lineage-node-label" transform="translate(240,59)">prediction markets</text>
+        </g>
+        <g class="lineage-node dim">
+          <circle cx="296" cy="150" r="4.5"/>
+          <text class="lineage-node-title" transform="translate(240,140)">Rise</text>
+          <text class="lineage-node-label" transform="translate(240,154)">stock brokerage</text>
+        </g>
+        <g class="lineage-node dim">
+          <circle cx="296" cy="235" r="4.5"/>
+          <text class="lineage-node-title" transform="translate(240,225)">Bounty</text>
+          <text class="lineage-node-label" transform="translate(240,239)">outsourced tasks</text>
+        </g>
+        <g class="lineage-node dim">
+          <circle cx="296" cy="325" r="4.5"/>
+          <text class="lineage-node-title" transform="translate(240,315)">WhatsApp Pay</text>
+          <text class="lineage-node-label" transform="translate(240,329)">chat payments</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section class="section section-border">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Capabilities</div>
+        <h2>One engine,<br>four verticals.</h2>
+      </div>
+      <p>Sire Core is the shared ML layer. Each product points it at a different problem, with the same signal discipline applied to different data.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card reveal">
+        <span class="index">Markets</span>
+        <h3>Sire AI Polymarket</h3>
+        <p>Real-world events priced by an ML ensemble and settled on-chain, viewed through a Bloomberg-terminal-style dashboard.</p>
+      </div>
+      <div class="card reveal">
+        <span class="index">Brokerage</span>
+        <h3>Rise</h3>
+        <p>Buy, hold, and get ML-driven guidance on Nigerian and US stocks, all in the same broker app.</p>
+      </div>
+      <div class="card reveal">
+        <span class="index">Tasks</span>
+        <h3>Bounty</h3>
+        <p>Post any task as a paid bounty. Hunters pick it up, get it done, and get paid on completion.</p>
+      </div>
+      <div class="card reveal">
+        <span class="index">Payments</span>
+        <h3>WhatsApp Pay</h3>
+        <p>Fund a wallet in crypto or stablecoins, spend in local currency, and send money across borders without leaving the chat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt section-border">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Enterprise</div>
+        <h2>Built to run<br>where it matters.</h2>
+      </div>
+      <p>Deployed inside regulated industries where uptime, auditability, and data residency aren't optional.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <span class="index">Deployment</span>
+        <h3>Private inference</h3>
+        <p>VPC and on-prem deployment options. Nothing leaves your environment by default.</p>
+      </div>
+      <div class="card reveal">
+        <span class="index">Audit</span>
+        <h3>Full audit trail</h3>
+        <p>Every inference logged, every model version pinned. Reproducible by design.</p>
+      </div>
+      <div class="card reveal">
+        <span class="index">Reliability</span>
+        <h3>99.98% uptime</h3>
+        <p>Multi-region failover with a published status page and a real incident history.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2 class="reveal">Four products. One place to see all of them.</h2>
+    <p class="reveal">Every Sire product is live now. Request access to any of them, or all four.</p>
+    <div class="btn-row reveal">
+      <a href="{{ url_for('products.index') }}" class="btn btn-primary">See the products</a>
+      <a href="{{ url_for('contact.index') }}" class="btn btn-ghost">Talk to sales</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

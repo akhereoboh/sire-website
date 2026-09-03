@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Products | Sire Ltd{% endblock %}
+
+{% block content %}
+
+<header class="section" style="padding-bottom:1.5rem;">
+  <div class="container" style="max-width:900px;">
+    <div class="eyebrow">Products</div>
+    <h1 style="font-size:var(--step-3);">Four products.<br>One core engine.</h1>
+    <p style="font-size:1.05rem; max-width:60ch;">Every Sire product runs on the same ML core. The difference is what it's pointed at: real-world events, stock brokerage, outsourced tasks, or a WhatsApp chat.</p>
+  </div>
+</header>
+
+<section class="section section-border">
+  <div class="container">
+    <div class="reveal">
+
+      <div class="product-card">
+        <div>
+          <span class="product-tag">Prediction markets</span>
+          <h3>Sire AI Polymarket</h3>
+          <p>A trading platform for real-world events (elections, sports, economic releases), priced by an ML ensemble and settled on-chain, viewed through a Bloomberg-terminal-style dashboard built for reading the order book fast.</p>
+          <div class="btn-row"><a href="{{ url_for('contact.index') }}" class="btn btn-ghost">Get access</a></div>
+        </div>
+        <div class="product-specs">
+          <div class="spec"><b>On-chain</b><span>settled via Polygon</span></div>
+          <div class="spec"><b>ML ensemble</b><span>probability scoring</span></div>
+          <div class="spec"><b>Terminal UI</b><span>live order book</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div>
+          <span class="product-tag">Stock brokerage</span>
+          <h3>Rise</h3>
+          <p>The broker app: buy and hold Nigerian and US stocks directly, with ML-driven guidance layered on top, including signals drawn from politicians' disclosed trades. Broker and predictor in one, instead of two separate apps.</p>
+          <div class="btn-row"><a href="{{ url_for('contact.index') }}" class="btn btn-ghost">Get access</a></div>
+        </div>
+        <div class="product-specs">
+          <div class="spec"><b>NGX + US</b><span>dual market coverage</span></div>
+          <div class="spec"><b>In-app</b><span>buy &amp; hold stocks</span></div>
+          <div class="spec"><b>ML guidance</b><span>incl. congressional trades</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div>
+          <span class="product-tag">Task marketplace</span>
+          <h3>Bounty</h3>
+          <p>A free-for-all platform for outsourcing tasks. Anyone can post a bounty for something they need done; hunters, regular people looking to earn, pick it up, complete it, and get paid.</p>
+          <div class="btn-row"><a href="{{ url_for('contact.index') }}" class="btn btn-ghost">Get access</a></div>
+        </div>
+        <div class="product-specs">
+          <div class="spec"><b>Open</b><span>anyone can post or hunt</span></div>
+          <div class="spec"><b>Pay on completion</b><span>bounty settles on delivery</span></div>
+          <div class="spec"><b>Any task</b><span>no category limits</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div>
+          <span class="product-tag">Payments</span>
+          <h3>WhatsApp Payment Bot</h3>
+          <p>A next-generation payment platform built where people already spend their time: WhatsApp. Fund a wallet with crypto or stablecoins, get paid out in your native currency, and send local or cross-border payments without leaving the chat.</p>
+          <div class="btn-row"><a href="{{ url_for('contact.index') }}" class="btn btn-ghost">Get access</a></div>
+        </div>
+        <div class="product-specs">
+          <div class="spec"><b>Crypto in</b><span>fund via crypto/stablecoins</span></div>
+          <div class="spec"><b>Local out</b><span>native currency payout</span></div>
+          <div class="spec"><b>Cross-border</b><span>local &amp; international transfers</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-band section-alt">
+  <div class="container">
+    <h2 class="reveal">Not sure which one you need?</h2>
+    <p class="reveal">Tell us what you're building and we'll point you at the right product, or tell you if it's overkill.</p>
+    <div class="btn-row reveal">
+      <a href="{{ url_for('contact.index') }}" class="btn btn-primary">Talk to us</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

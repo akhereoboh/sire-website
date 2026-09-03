@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>{% block title %}Sire Ltd{% endblock %}</title>
+<meta name="description" content="{% block description %}Sire Ltd runs one ML engine behind four products: Sire AI Polymarket, Rise, Bounty, and WhatsApp Pay.{% endblock %}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="{{ url_for('home.index') }}" class="nav-mark">
+      <span class="glyph">S</span> Sire Ltd
+    </a>
+    <div class="nav-links">
+      <a href="{{ url_for('home.index') }}" class="{{ 'active' if active == 'home' else '' }}">Home</a>
+      <a href="{{ url_for('about.index') }}" class="{{ 'active' if active == 'about' else '' }}">About</a>
+      <a href="{{ url_for('products.index') }}" class="{{ 'active' if active == 'products' else '' }}">Products</a>
+      <a href="{{ url_for('careers.index') }}" class="{{ 'active' if active == 'careers' else '' }}">Careers</a>
+    </div>
+    <a href="{{ url_for('contact.index') }}" class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<nav class="bottom-nav" aria-label="Primary">
+  <a href="{{ url_for('home.index') }}" class="{{ 'active' if active == 'home' else '' }}">
+    <svg viewBox="0 0 24 24"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/></svg>
+    <span>Home</span>
+  </a>
+  <a href="{{ url_for('about.index') }}" class="{{ 'active' if active == 'about' else '' }}">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5"/><circle cx="12" cy="8" r="0.6" fill="currentColor" stroke="none"/></svg>
+    <span>About</span>
+  </a>
+  <a href="{{ url_for('products.index') }}" class="{{ 'active' if active == 'products' else '' }}">
+    <svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></svg>
+    <span>Products</span>
+  </a>
+  <a href="{{ url_for('careers.index') }}" class="{{ 'active' if active == 'careers' else '' }}">
+    <svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="1.5"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
+    <span>Careers</span>
+  </a>
+  <a href="{{ url_for('contact.index') }}" class="{{ 'active' if active == 'contact' else '' }}">
+    <svg viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="M4 6.5 12 12l8-5.5"/></svg>
+    <span>Contact</span>
+  </a>
+</nav>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="nav-mark" style="margin-bottom:0.75rem;"><span class="glyph">S</span> Sire Ltd</div>
+        <p style="max-width:32ch; margin:0;">One ML engine behind four products.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="{{ url_for('about.index') }}">About</a>
+          <a href="{{ url_for('careers.index') }}">Careers</a>
+          <a href="{{ url_for('contact.index') }}">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="{{ url_for('products.index') }}">Sire AI Polymarket</a>
+          <a href="{{ url_for('products.index') }}">Rise</a>
+          <a href="{{ url_for('products.index') }}">Bounty</a>
+          <a href="{{ url_for('products.index') }}">WhatsApp Pay</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#">Documentation</a>
+          <a href="#">Research</a>
+          <a href="#">Trust &amp; safety</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ current_year }} Sire Ltd. All rights reserved.</p>
+      <p>Cambridge · Austin · Berlin</p>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>
