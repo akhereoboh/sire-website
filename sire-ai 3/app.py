@@ -1,6 +1,9 @@
 import os
 from datetime import datetime
 from flask import Flask
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from blueprints.home.routes import bp as home_bp
 from blueprints.about.routes import bp as about_bp
