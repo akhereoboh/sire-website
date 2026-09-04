@@ -97,16 +97,7 @@ p{ margin: 0 0 1em 0; color: var(--ink-dim); }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--brass);
-  display:flex;
-  align-items:center;
-  gap: 0.6em;
   margin-bottom: 1.1em;
-}
-.eyebrow::before{
-  content:"";
-  width: 22px; height: 1px;
-  background: var(--brass);
-  display:inline-block;
 }
 
 ::selection{ background: var(--brass); color: var(--bg); }
